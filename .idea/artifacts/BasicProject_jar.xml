@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BasicProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BasicProject_jar</output-path>
+    <root id="archive" name="BasicProject.jar">
+      <element id="module-output" name="BasicProject" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
