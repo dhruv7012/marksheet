@@ -19,6 +19,7 @@ public class Main {
         int n = sc.nextInt();
         System.out.println();
 
+        //student details useripnut
         List<Student> studentlist = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
             System.out.println("Enter Detail of Student " + (i + 1) + " (ID is set to " + (i + 1) + ")");
@@ -61,6 +62,7 @@ public class Main {
             System.out.println("How many subject has '" + studentlist.get(i).first_name + "' has taken ? ");
             System.out.print("Enter the number : ");
 
+            //number of subjects (runs n time (n is total no of students))
             m = sc.nextInt();
 
             for (int j = 0; j < m; j++) {
