@@ -4,11 +4,12 @@ import org.json.simple.JSONObject;
 
 import com.google.gson.Gson;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 public class Marksheet {
-    public void generateResults(StudentDTO std) {
+    public void generateResults(Map<Integer, StudentDTO> map) {
 
 //        System.out.println();
 //        System.out.println();
@@ -29,9 +30,7 @@ public class Marksheet {
 
 
         Gson gs = new Gson();
-
-
-        System.out.println(gs.toJson(std));
+        System.out.println(gs.toJson(map));
 
 //        JSONObject obj=new JSONObject();
 //

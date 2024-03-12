@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.*;
-import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -91,16 +90,20 @@ public class Main {
         }
 //        System.out.println(arr);
 
+        Map<Integer, StudentDTO> stddto = new HashMap<>();
 
         Marksheet marksheet = new Marksheet();
 
         for (int i = 0; i < n; i++) {
-            marksheet.generateResults(new StudentDTO(
+
+            stddto.put((i+1), new StudentDTO(
                     studentlist.get(i).first_name,
                     studentlist.get(i).last_name,
-                    arr.get(i)
-            ));
+                    arr.get(i)));
         }
+
+        marksheet.generateResults(stddto);
+
 
     }
 }

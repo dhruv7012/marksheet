@@ -16,9 +16,16 @@ public class JsonLearn {
         hasmap.put("JAVA" , 70.0);
         hasmap.put("Angular" , 80.0);
 
-        StudentDTO std = new StudentDTO("Dhruv","Parekh",hasmap);
+        Map<String, Double> hasmap2 = new HashMap<>();
 
-        marksheet.generateResults(std);
+        hasmap.put("DSA" , 10.0);
+        hasmap.put("JAVA" , 70.0);
+
+        StudentDTO std = new StudentDTO("Dhruv","Parekh",hasmap);
+        StudentDTO std2 = new StudentDTO("Maan","Laad",hasmap2);
+
+//        marksheet.generateResults(1,std);
+//        marksheet.generateResults(2,std2);
 
 
     }
