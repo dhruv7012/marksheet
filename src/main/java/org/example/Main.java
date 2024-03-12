@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,8 +49,8 @@ public class Main {
         double subjectMark;
         int subjectId;
 
-        int m;
-
+        String m;
+        int k;
         Map<String, Integer> subjectMap = new HashMap<>();
         ArrayList<Map<String, Double>> arr = new ArrayList<>();
 
@@ -59,9 +60,19 @@ public class Main {
 
             System.out.println("How many subject has '" + studentlist.get(i).first_name + "' has taken ? ");
             System.out.print("Enter the number : ");
-            m = sc.nextInt();
 
-            for (int j = 0; j < m; j++) {
+            m = sc.next();
+
+            if(Pattern.matches("/d",m)){
+                k = Integer.parseInt(m);
+            }else {
+                System.out.println("Please Enter Number ");
+                m = sc.next();
+                k = Integer.parseInt(m);
+            }
+
+
+            for (int j = 0; j < k; j++) {
 
                 System.out.print("Enter Subject " + (j + 1) + "'s Name : ");
                 subjectName = sc.next();
@@ -87,7 +98,6 @@ public class Main {
             System.out.println();
             arr.add(hasmap);
         }
-
 //        System.out.println(arr);
 
 
