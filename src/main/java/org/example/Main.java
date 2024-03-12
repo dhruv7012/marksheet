@@ -59,7 +59,7 @@ public class Main {
 
             Map<String, Double> hasmap = new HashMap<>();
 
-            System.out.println("How many subject has '" + studentlist.get(i).first_name + "' has taken ? ");
+            System.out.println("How many subject '" + studentlist.get(i).first_name + "' has taken ? ");
             System.out.print("Enter the number : ");
 
             //number of subjects (runs n time (n is total no of students))
