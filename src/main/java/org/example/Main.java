@@ -99,7 +99,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
 
-            stddto.put((i+1), new StudentDTO(
+            stddto.put((i + 1), new StudentDTO(
                     studentlist.get(i).first_name,
                     studentlist.get(i).last_name,
                     arr.get(i)));
