@@ -1,12 +1,13 @@
 package org.example;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class JsonLearn {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
         Marksheet marksheet = new Marksheet();
@@ -24,9 +25,15 @@ public class JsonLearn {
         StudentDTO std = new StudentDTO("Dhruv","Parekh",hasmap);
         StudentDTO std2 = new StudentDTO("Maan","Laad",hasmap2);
 
+        Map<Integer, StudentDTO> stddto = new HashMap<>();
+
+        stddto.put(1,std);
+        stddto.put(2,std2);
+
 //        marksheet.generateResults(1,std);
 //        marksheet.generateResults(2,std2);
 
+        marksheet.generateResults(stddto);
 
     }
 }

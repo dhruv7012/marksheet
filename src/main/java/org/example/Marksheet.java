@@ -1,15 +1,14 @@
 package org.example;
 
+import com.google.gson.Gson;
 import org.json.simple.JSONObject;
 
-import com.google.gson.Gson;
-
-import java.util.HashMap;
-import java.util.Iterator;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Map;
 
 public class Marksheet {
-    public void generateResults(Map<Integer, StudentDTO> map) {
+    public void generateResults(Map<Integer, StudentDTO> map) throws IOException {
 
 //        System.out.println();
 //        System.out.println();
@@ -27,10 +26,16 @@ public class Marksheet {
 //
 
 
+        JSONObject j = new JSONObject();
+        for (Map.Entry<Integer, StudentDTO> entry : map.entrySet()) {
+
+        }
 
 
-        Gson gs = new Gson();
-        System.out.println(gs.toJson(map));
+        System.out.println(j.toJSONString());
+
+//        Gson gs = new Gson();
+//        System.out.println(gs.toJson(map));
 
 //        JSONObject obj=new JSONObject();
 //
@@ -38,7 +43,17 @@ public class Marksheet {
 //
 //        System.out.println(obj);
 
+//        gs.toJson(map, new FileWriter("C:\\Dhruv\\JSONoutputs\\output.json"));
 
+
+        try (FileWriter file = new FileWriter("C:\\Dhruv\\JSONoutputs\\output.json")) {
+            //We can write any JSONArray or JSONObject instance to the file
+            file.write(j.toJSONString());
+            file.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }

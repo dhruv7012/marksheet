@@ -6,15 +6,15 @@ import java.util.Map;
 public class StudentDTO {
     String student_name;
     double total_marks;
-    Map<String , Double> markMap = new HashMap<>();
+    Map<String , Double> subjectGrades = new HashMap<>();
     double average_marks;
     String grade;
 
     public double getAvgMarks() {
-        if (markMap.isEmpty()){
+        if (subjectGrades.isEmpty()){
             return 0;
         }
-        return total_marks/markMap.size();
+        return total_marks/subjectGrades.size();
     }
     public String getGrades() {
 
@@ -36,7 +36,7 @@ public class StudentDTO {
 
         double cm = 0;
 
-        for (Map.Entry<String, Double> entry : markMap.entrySet()) {
+        for (Map.Entry<String, Double> entry : subjectGrades.entrySet()) {
             cm += entry.getValue();
         }
 
@@ -45,7 +45,7 @@ public class StudentDTO {
 
     public StudentDTO(String fname,String lname, Map<String , Double> hmap) {
         this.student_name = fname + " " + lname;
-        this.markMap = hmap;
+        this.subjectGrades = hmap;
         this.total_marks = getTotalMarks();
         this.average_marks = getAvgMarks();
         this.grade = getGrades();
