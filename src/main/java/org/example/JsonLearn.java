@@ -28,7 +28,7 @@ public class JsonLearn {
         Map<Integer, StudentDTO> stddto = new HashMap<>();
 
         stddto.put(1,std);
-        stddto.put(2,std2);
+//        stddto.put(2,std2);
 
 //        marksheet.generateResults(1,std);
 //        marksheet.generateResults(2,std2);

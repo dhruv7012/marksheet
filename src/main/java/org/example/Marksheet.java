@@ -25,18 +25,17 @@ public class Marksheet {
 //        System.out.println("Grade : " + std.grade);
 //
 
+//
+//        JSONObject j = new JSONObject();
+//        for (Map.Entry<Integer, StudentDTO> entry : map.entrySet()) {
+//            j.put(entry.getKey(),entry.getValue());
+//        }
 
-        JSONObject j = new JSONObject();
-        for (Map.Entry<Integer, StudentDTO> entry : map.entrySet()) {
 
-        }
+//        System.out.println(j.toJSONString());
 
-
-
-        System.out.println(j.toJSONString());
-
-//        Gson gs = new Gson();
-//        System.out.println(gs.toJson(map));
+        Gson gs = new Gson();
+        System.out.println(gs.toJson(map));
 
 //        JSONObject obj=new JSONObject();
 //
@@ -49,7 +48,7 @@ public class Marksheet {
 
         try (FileWriter file = new FileWriter("C:\\Dhruv\\JSONoutputs\\output.json")) {
             //We can write any JSONArray or JSONObject instance to the file
-            file.write(j.toJSONString());
+            file.write(gs.toJson(map));
             file.flush();
 
         } catch (IOException e) {
