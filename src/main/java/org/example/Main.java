@@ -49,8 +49,8 @@ public class Main {
         double subjectMark;
         int subjectId;
 
-        String m;
-        int k;
+        int m;
+
         Map<String, Integer> subjectMap = new HashMap<>();
         ArrayList<Map<String, Double>> arr = new ArrayList<>();
 
@@ -61,18 +61,9 @@ public class Main {
             System.out.println("How many subject has '" + studentlist.get(i).first_name + "' has taken ? ");
             System.out.print("Enter the number : ");
 
-            m = sc.next();
+            m = sc.nextInt();
 
-            if(Pattern.matches("/d",m)){
-                k = Integer.parseInt(m);
-            }else {
-                System.out.println("Please Enter Number ");
-                m = sc.next();
-                k = Integer.parseInt(m);
-            }
-
-
-            for (int j = 0; j < k; j++) {
+            for (int j = 0; j < m; j++) {
 
                 System.out.print("Enter Subject " + (j + 1) + "'s Name : ");
                 subjectName = sc.next();
